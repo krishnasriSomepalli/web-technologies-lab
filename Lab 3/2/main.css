@@ -1,0 +1,39 @@
+#complete{
+	width: 400px;
+	border: 1px solid black;
+	padding-left: 8px;
+}
+#head{
+	color: #FFFFFF;
+	background-color: #F88379;
+	width: 200px;
+}
+#head h2{
+	margin-top: 4px;
+	margin-bottom: 0px;
+}
+#head p{
+	font-family: Allura;
+	text-align: right;
+	margin-top: 0px;
+}
+.subs{
+	color: #F88379;
+}
+span{
+	font-weight: 800;
+	text-decoration: underline;
+}
+input[type=text]{
+	background-color: #FFE4E1;
+}
+input{
+	margin-bottom: 4px;
+}
+select{
+	margin-bottom: 4px;
+}
+textarea{
+	margin-bottom: 4px;
+}
+
