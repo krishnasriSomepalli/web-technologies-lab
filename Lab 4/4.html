@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>4</title>
+		<script>
+			function func(){
+				var str = document.getElementById("str").value;
+				var s = document.getElementById("s").value;
+				var r = document.getElementById("r").value;
+				var res = str.replace(s, r);
+				document.getElementById("result").innerHTML = res;	
+			}
+		</script>
+	</head>
+	<body>
+		<div style="margin-left: 25vw; margin-top: 25vh;">
+			<h3>Replace</h3>
+			<input type="text" id="str" placeholder="Enter a character string" /> <br/>
+			<input type="text" id="s" placeholder="Replace what?" /> <br/>
+			<input type="text" id="r" placeholder="Replace with what?" /> <br/>
+			<button onclick="func()">Go</button>
+			<p style="margin-top: 5vw;" id="result"></p>
+		</div>
+	</body>
+</html>

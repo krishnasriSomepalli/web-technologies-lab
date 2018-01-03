@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>3</title>
+		<script>
+			function patternMatching(){
+				var no = document.getElementById("no").value;
+				var phone = new RegExp('[9][0-9]*');	
+				if(phone.test(no) === true && no.length === 10)
+					window.alert("Matched!");
+				else
+					window.alert("Not matched!");		
+			}
+		</script>
+	</head>
+	<body>
+		<div style="margin-left: 25vw; margin-top: 25vh;">
+			<h3>Pattern Matching</h3>
+			<input type="text" id="no" placeholder="Phone Number" /> <br/>
+			<button onclick="patternMatching()">Go</button>
+		</div>
+	</body>
+</html>

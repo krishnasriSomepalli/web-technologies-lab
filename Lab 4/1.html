@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>1</title>
+		<script>
+			function authenticate(){
+				p1 = document.getElementById("p1").value;
+				p2 = document.getElementById("p2").value;
+				if(p1 === p2)
+					window.alert("Authentication success!");
+				else
+					window.alert("Authentic failure.");
+					
+			}
+		</script>
+	</head>
+	<body>
+		<div style="margin-left: 25vw; margin-top: 25vh;">
+			<h3>Login:</h3>
+			<input type="password" id="p1" placeholder="Password" /> <br/>
+			<input type="password" id="p2" placeholder="Confirm Password" /> <br/> 
+			<button onclick="authenticate()">Go</button>
+		</div>
+	</body>
+</html>

@@ -5,12 +5,11 @@
 		<script>
 			function mulTable(){
 				var input = parseInt(document.getElementById('in').value);
-                var element = parseInt(document.getElementById("result"));
-                element.innerHTML = "";
+                document.getElementById('result').innerHTML = "";
 				for(var i = 1; i <= 10; i++)
 				{
-                    var text = element.innerHTML;
-					element.innerHTML = text + input +" * "+ i +" = "+ input*i +"<br/>";
+                    var text = document.getElementById('result').innerHTML;
+					document.getElementById('result').innerHTML = text + input +" * "+ i +" = "+ input*i +"<br/>";
 				}
 			}
 		</script>

@@ -1,0 +1,32 @@
+<!--https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>2</title>
+		<script>
+			function sort(){
+				var n = document.getElementById("n").value;
+				n = n.split("").sort(function(a,b){
+					a = a.toLowerCase();
+					b = b.toLowerCase();
+					if(a == b)
+						return 0;
+					else if(a > b)
+						return 1;
+					else
+						return -1;				
+				});
+				n = n.join("");	
+				document.getElementById("result").innerHTML = "Sorted: " + n;				
+			}
+		</script>
+	</head>
+	<body>
+		<div style="margin-left: 25vw; margin-top: 25vh;">
+			<h3>Sorting</h3>
+			<input type="text" id="n" placeholder="Enter a character string" /> <br/>
+			<button onclick="sort()">Go</button>
+			<p style="margin-top: 5vw;" id="result"></p>
+		</div>
+	</body>
+</html>
