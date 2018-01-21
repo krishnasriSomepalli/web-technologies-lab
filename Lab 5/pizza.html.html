@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pizza Order</title>
+    </head>
+    <body>
+        <h3 style="text-align: center;">Pizza Order Form</h3>
+        <br/>
+        <table cellspacing='0' border='1' align="center">
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>Veg Pizza</td>
+                <td>Rs. 70</td>
+                <td>
+                    <input type="number" id="1" value="0"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Paneer Pizza</td>
+                <td>Rs. 80</td>
+                <td>
+                    <input type="number" id="2" value="0"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Chicken Pizza</td>
+                <td>Rs. 100</td>
+                <td>
+                    <input type="number" id="3" value="0"/>
+                </td>
+            </tr>
+        </table>
+        <button onclick="total()" style="position: relative; left: 42vw; top: 2vh;">Total</button>
+        <input type="text" id="amount" value="Rs.0" style="position: relative; left: 42vw; top: 2vh;"/>
+        <br/>
+        <button onclick="confirming()" style="position: relative; left: 45vw; top: 3vh;">Confirm</button>
+        <button onclick="cancel()" style="position: relative; left: 45vw; top: 3vh;">Cancel</button>
+        <p id="result" style="position: relative; left: 47vw; top: 4vh;"></p>
+        <script>
+            var flag = 0;
+            function total(){
+                var a = parseInt(document.getElementById("1").value)*70;
+                var b = parseInt(document.getElementById("2").value)*80;
+                var c = parseInt(document.getElementById("3").value)*100;
+                if(a>=0 && b>=0 && c>=0)
+                {
+                    var total = a+b+c;
+                    document.getElementById("amount").value = "Rs." + total;
+                }
+                else
+                    window.alert("Invalid input!");
+            }
+            function confirming(){
+                var a = parseInt(document.getElementById("1").value)*70;
+                var b = parseInt(document.getElementById("2").value)*80;
+                var c = parseInt(document.getElementById("3").value)*100;
+                if(a>0 || b>0 || c>0)
+                {
+                    var total = a+b+c;
+                    document.getElementById("amount").value = "Rs." + total;
+                    if(confirm("Your order wilh you within 30 minutes!"))
+                    {
+                        document.getElementById("result").innerHTML = "Order placed :)";
+                        flag = 0;
+                    }
+                    else
+                    {
+                        flag = 1;
+                        cancel();
+                    }
+                }
+                else
+                {
+                    window.alert("Invalid input!");
+                    flag = 0;
+                }
+            }
+            function cancel(){
+                if(flag == 1)
+                {
+                    document.getElementById("1").value = "0";
+                    document.getElementById("2").value = "0";
+                    document.getElementById("3").value = "0";
+                    document.getElementById("amount").value = "Rs.0";
+                    document.getElementById("result").innerHTML = "Order cancelled :(";
+                }
+            }
+        </script>
+    </body>
+</html>

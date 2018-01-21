@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+	<title>Multiplication Table</title>
+</head>
+<body>
+	<h3 style="position: relative; left: 40vw;">Multiplication Table</h3>
+	<form style="position: relative; left: 30vw; margin-top: 30px;" onsubmit="return false;">
+		<input type="number" id="rows" placeholder="Number of Rows" />
+		<input type="number" id="columns" placeholder="Number of Columns" />
+		<button onclick="mulTable()">Generate</button>
+	</form>
+	<table id="table" border='1' cellspacing='0' align="center" style="visibility: hidden; margin-top: 60px;"></table>
+	<script>
+		function mulTable(){
+			document.getElementById("table").innerHTML = "";
+			document.getElementById("table").style.visibility = "visible";
+			var rows = parseInt(document.getElementById("rows").value);
+			var columns = parseInt(document.getElementById("columns").value);
+			for(i = 1; i <= rows; i++)
+			{
+				var table = document.getElementById("table");
+				var row = document.createElement("tr");
+				table.appendChild(row);
+				for(j = 1; j <= columns; j++)
+				{
+					var cell = document.createElement("td");
+					row.appendChild(cell);
+					cell.innerHTML = i*j;
+					cell.style.padding = "7px";
+				}
+			}
+		}
+	</script>
+</body>

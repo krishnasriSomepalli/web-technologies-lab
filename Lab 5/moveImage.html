@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Mover</title>
+    </head>
+    <body>
+        <p style="text-align: center">Enter the coordinates where you want to move the image to</p>
+        <input type="number" placeholder="x(px)" id="x" style="position: relative; left: 35vw;" />
+        <input type="number" placeholder="y(px)" id="y" style="position: relative; left: 35vw;" />
+        <button onclick="move()" style="position: relative; left: 35vw;">Move</button>
+        <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/152571-200.png" style="position: absolute; left: 42vw; top: 7vw;" id="img"/>
+        <script>
+            function move(){
+                x = parseInt(document.getElementById("x").value);
+                y = parseInt(document.getElementById("y").value);
+                document.getElementById("img").style.left = x + "px";
+                document.getElementById("img").style.top = y + "px";
+            }
+        </script>
+    </body>
+</html>
