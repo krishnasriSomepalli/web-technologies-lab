@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Fields Validation</title>
+    </head>
+    <style>
+        label{
+            position: fixed;
+            left: 10vw;
+        }
+        input, select, textarea{
+            position: fixed;
+            left: 20vw;
+        }
+    </style>
+    <body>
+        <h2 style="margin-left: 7vw;">Registration Form</h2>
+        <form onsubmit="return false;" style="position: fixed; top: 15vh;">
+            <label>User id: </label>
+            <input type="text" id="id" onchange="removeHighlight(event)" /> <br/>
+            <label>Password: </label>
+            <input type="password" id="password" onchange="removeHighlight(event)" /> <br/>
+            <label>Name: </label>
+            <input type="text" id="name" onchange="removeHighlight(event)" /> <br/>
+            <label>Address: </label>
+            <input type="text" id="address" /> <br/>
+            <label>Country: </label>
+            <select id="country" onchange="removeHighlight(event)" >
+                <option value="0">(Please select a country)</option>
+                <option value="1">India</option>
+                <option value="2">Afghanistan</option>
+                <option value="3">Bangladesh</option>
+                <option value="4">Bhutan</option>
+                <option value="5">China</option>
+                <option value="6">Maldives</option>
+                <option value="7">Myanmar</option>
+                <option value="8">Nepal</option>
+                <option value="9">Pakistan</option>
+                <option value="10">Sri Lanka</option>
+            </select> <br/>
+            <label>ZIP Code: </label>
+            <input type="text" id="zip" onchange="removeHighlight(event)" /> <br/>
+            <label>Email: </label>
+            <input type="text" id="email" onchange="removeHighlight(event)" /> <br/>
+            <label>Gender: </label>
+            <input type="radio" name="gender" id="male" onchange="removeLabel()" />
+            <label style="left: 21.7vw;">Male</label>
+            <input type="radio" name="gender" id="female" style="left: 25vw;" onchange="removeLabel()" />
+            <label style="left: 26.7vw;">Female</label>
+            <label id="validation" style="left: 31vw; color: red;"></label><br/>
+            <label>About: </label>
+            <textarea rows="5" cols="20"></textarea>
+            <input type="submit" value="Submit" onclick="validate()" style="top: 50vh;"/>
+        </form>
+        <p id="result"></p>
+        <script>
+            function validate(){
+                var flag = 0;
+                if(!validateID(5, 12)){
+                    highlight("id", "Required. Must be of length 5-12");
+                    flag = 1;
+                }
+                if(!validatePassword(7, 12)){
+                    highlight("password", "Required. Must be of length 7-12");
+                    flag = 1;
+                }
+                if(!validateName()){
+                    highlight("name", "Required. Must contain alphabets only");
+                    flag = 1;
+                }
+                if(!validateCountry()){
+                    highlight("country", "Required");
+                    flag = 1;
+                }
+                if(!validateZIP()){
+                    highlight("zip", "Required. Must be numeric");
+                    flag = 1;
+                }
+                if(!validateEmail()){
+                    highlight("email", "Required. Must be valid");
+                    flag = 1;
+                }
+                if(!validateGender()){
+                    document.getElementById("validation").innerHTML = "Required";
+                    flag = 1;
+                }
+                if(flag == 0)
+                    document.getElementById("result").innerHTML = "Submitted!";
+            }
+            function validateID(min, max){
+                var id = document.getElementById("id").value;
+                if(id.length == 0 || id.length > max || id.length < min)
+                    return false;
+                else
+                    return true;
+            }
+            function validatePassword(min, max){
+                var password = document.getElementById("password").value;
+                if(password.length == 0 || password.length > max || password.length < min)
+                    return false;
+                else
+                    return true;
+            }
+            function validateName(){
+                var name = document.getElementById("name").value;
+                var namePattern = new RegExp('^[A-Z][a-z]*( [A-Z][a-z]*)+$');
+                return namePattern.test(name);
+            }
+            function validateCountry(){
+                var country = document.getElementById("country");
+                if(country.selectedIndex == 0)
+                    return false;
+                else
+                    return true;
+            }
+            function validateZIP(){
+                var zip = document.getElementById("zip").value;
+                var zipPattern = new RegExp('[0-9]+');
+                return zipPattern.test(zip);
+            }
+            function validateEmail(){
+                var email = document.getElementById("email").value;
+                var emailPattern = new RegExp('^[a-zA-Z0-9][a-zA-Z0-9.!#$%&\'*+\\/=?^_`{|}~\-]*@[a-zA-Z0-9](?:[a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?)*$');
+                return emailPattern.test(email);
+            }
+            function validateGender(){
+                if(!document.getElementById('male').checked)
+                    if(!document.getElementById('female').checked)
+                        return false;
+                return true;
+            }
+            function highlight(id, report){
+                document.getElementById(id).style = "border: 1px solid red;";
+                document.getElementById(id).setAttribute("placeholder", report);
+            }
+            function removeHighlight(event){
+                var id = event.target.getAttribute("id");
+                document.getElementById(id).style = "border: 1px solid black;";
+                document.getElementById(id).setAttribute("placeholder", "");
+            }
+            function removeLabel(){
+                document.getElementById("validation").innerHTML = "";
+            }
+        </script>
+    </body>
+</html>

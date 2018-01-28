@@ -52,3 +52,7 @@
    - moveImage.html
    - mulTable.html
    - pizza.html
+6. **Lab 6: HTML, JS**
+   - calculator.html
+   - validation1.html
+   - validation2.html

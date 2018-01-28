@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+	<title>Calculator</title>
+</head>
+<style>
+	button{
+		width: 100%;
+	}
+</style>
+<body>
+	<h3 style="text-align: center; margin-top: 10vw;">Calculator</h3>
+	<table cellspacing="0" border="1" align="center">
+		<tr>
+			<td colspan="4">
+				<input type="text" id="result" value=""/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="btnclick(event)">1</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">2</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">3</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">+</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="btnclick(event)">4</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">5</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">6</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">-</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="btnclick(event)">7</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">8</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">9</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">*</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="clearBox()">c</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">0</button>
+			</td>
+			<td>
+				<button onclick="calResult()">=</button>
+			</td>
+			<td>
+				<button onclick="btnclick(event)">/</button>
+			</td>
+		</tr>
+	</table>
+	<script>
+		function btnclick(event){
+			var curr = document.getElementById("result").value;
+			document.getElementById("result").value = curr + event.target.innerHTML;
+		}
+		function calResult(){
+			var result = eval(document.getElementById("result").value);
+			document.getElementById("result").value = result;
+		}
+		function clearBox(){
+			document.getElementById("result").value = "";
+		}
+	</script>
+</body>
