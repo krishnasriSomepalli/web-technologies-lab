@@ -1,0 +1,25 @@
+PR{
+	padding-top: 10vh;
+	padding-left: 20vw;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+heading{
+	font-size: 24px;
+	font-weight: 800;
+}
+
+employee{
+	display: block;
+}
+
+character{
+	color: yellow;
+}
+
+cast{
+	position: fixed;
+	left: 35vw;
+	color: pink;
+}

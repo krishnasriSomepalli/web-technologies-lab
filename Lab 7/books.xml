@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bookstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="bookstore.xsd">
+    <book price="219" ISBN="978-0-14-241214-5" publicationdate="2008-10-02">
+        <title>Let It Snow</title>
+        <author>
+            <first-name>John</first-name>
+            <last-name>Green</last-name>
+        </author>
+        <genre>Young Adult</genre>
+    </book>
+    <book price="299.84" ISBN="978-1-59448-950-1">
+        <title>A Thousand Splendid Suns</title>
+        <author>
+            <first-name>Khaled</first-name>
+            <last-name>Hosseini</last-name>
+        </author>
+    </book>
+</bookstore>
