@@ -5,7 +5,7 @@
    - CV.html
    - Nested List.html
    - Tables.html
-2. **Lab 2: HTML (frames, forms)**
+1. **Lab 2: HTML (frames, forms)**
    - ikea
      - framea.html
      - frameb.html
@@ -33,7 +33,7 @@
    - student_reg_form.html
    - user_reg_form.html
    - wt_frames.html
-3. **Lab 3: HTML, CSS, JS**
+1. **Lab 3: HTML, CSS, JS**
    - arithmetic
      - script.js
    - developIt
@@ -42,21 +42,21 @@
    - cat.html
    - developIt.html
    - mulTable.html
-4. **Lab 4: HTML, JS**
+1. **Lab 4: HTML, JS**
    - password.html   
    - phoneno.html
    - replace.html
    - sort.html
-5. **Lab 5: HTML, JS**
+1. **Lab 5: HTML, JS**
    - emailVal.html
    - moveImage.html
    - mulTable.html
    - pizza.html
-6. **Lab 6: HTML, JS**
+1. **Lab 6: HTML, JS**
    - calculator.html
    - validation1.html
    - validation2.html
-7. **Lab 7: XML, DTD, CSS, XSL, XSD**
+1. **Lab 7: XML, DTD, CSS, XSL, XSD**
    1. cars.xml
       stock.dtd
    1. PR.xml
@@ -65,8 +65,8 @@
       main.css
    1. books.xml
       bookstore.xsd
-8. **Lab 8: Servlets (2)**
-   - cse128
+1. **Lab 8: Servlets (2)**
+   - 1
      - src
        - HelloWorld.java
        - HTTPdata.java
@@ -75,4 +75,25 @@
          - HelloWorld.class
          - HTTPdata.class
        - web.xml
-     - cse128.war
+     - 1.war
+1. **Lab 9: Servlets (4)**
+   - 2
+     - src
+       - cookies1.java
+       - cookies2.java
+       - hiddenForm1.java
+       - hiddenForm2.java
+       - httpSession.java
+       - servletContext.java
+     - WEB_INF
+       - classes
+         - cookies1.class
+         - cookies2.class
+         - hiddenForm1.class
+         - hiddenForm2.class
+         - httpSession.class
+         - servletContext.class
+       - web.xml
+     - 2.war
+     - index1.html
+     - index2.html

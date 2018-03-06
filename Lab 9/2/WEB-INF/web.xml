@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<web-app>
+	<context-param>
+        <param-name>a</param-name>
+        <param-value>100</param-value>
+    </context-param>
+    <context-param>
+        <param-name>b</param-name>
+        <param-value>200</param-value>
+    </context-param>
+
+	<servlet>
+		<servlet-name>Cookies 1</servlet-name>
+		<servlet-class>cookies1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Cookies 1</servlet-name>
+		<url-pattern>/c1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Cookies 2</servlet-name>
+		<servlet-class>cookies2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Cookies 2</servlet-name>
+		<url-pattern>/c2</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Hidden Form 1</servlet-name>
+		<servlet-class>hiddenForm1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Hidden Form 1</servlet-name>
+		<url-pattern>/f1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Hidden Form 2</servlet-name>
+		<servlet-class>hiddenForm2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Hidden Form 2</servlet-name>
+		<url-pattern>/f2</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>HTTP Session</servlet-name>
+		<servlet-class>httpSession</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HTTP Session</servlet-name>
+		<url-pattern>/session</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletContext Example</servlet-name>
+		<servlet-class>servletContext</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletContext Example</servlet-name>
+		<url-pattern>/servletcontext</url-pattern>
+	</servlet-mapping>
+</web-app> 
