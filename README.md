@@ -56,3 +56,23 @@
    - calculator.html
    - validation1.html
    - validation2.html
+7. **Lab 7: XML, DTD, CSS, XSL, XSD**
+   1. cars.xml
+      stock.dtd
+   1. PR.xml
+      template.xsl
+   1. PR2.xml
+      main.css
+   1. books.xml
+      bookstore.xsd
+8. **Lab 8: Servlets (2)**
+   - cse128
+     - src
+       - HelloWorld.java
+       - HTTPdata.java
+     - WEB_INF
+       - classes
+         - HelloWorld.class
+         - HTTPdata.class
+       - web.xml
+     - cse128.war
