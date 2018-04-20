@@ -14,5 +14,4 @@ public class Authenticated extends HttpServlet {
     String name=request.getParameter("username"); 
     pwriter.print("Hello "+name+"!");
  } 
- 
 } 

@@ -6,7 +6,7 @@
 <body>
 	<h1>Registration Form</h1>
     <form action="Registration" method="post">
-        <table style="with: 50%">
+        <table style="width: 50%">
             <tr>
                 <td>Name</td>
                 <td><input type="text" name="name"/></td>

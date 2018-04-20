@@ -1,5 +1,4 @@
 import java.io.*;  
-import java.io.*;  
 import javax.servlet.*;  
 import javax.servlet.http.*;      
 public class Login extends HttpServlet 

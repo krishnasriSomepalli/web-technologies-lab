@@ -7,13 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**Servlet implementation class UserDataServlet*/
 public class Registration extends HttpServlet {
-//	private static final long serialVersionUID = 1L;
-//          
-//	public Registration() {
-//	   super();
-//	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");

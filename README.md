@@ -97,3 +97,37 @@
      - 2.war
      - index1.html
      - index2.html
+1. **Lab 10: Servlets (RequestDispatcher)**
+   - 3
+     - src
+       - Authenticated.java
+       - Login.java
+     - WEB_INF
+       - classes
+         - Authenticated.class
+       - Login.class
+       - web.xml
+     - 3.war
+     - index.html
+1. **Lab 11: JSP, Servlets (Filters)**
+   - 4
+     - src
+       - Registration.java
+     - WEB_INF
+       - classes
+         - Registration.class
+       - web.xml
+     - 4.war
+     - home.jsp
+     - registration.jsp
+   - 5
+     - src
+       - FilterDemo.java
+       - Servlet1.java
+     - WEB_INF
+       - classes
+         - FilterDemo.class
+         - Servlet1.class
+       - web.xml
+     - 5.war
+     - index.html
